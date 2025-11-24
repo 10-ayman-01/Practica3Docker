@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación Dinámica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        
+        <div id="selection-screen">
+            <h2>👋 Bienvenido</h2>
+            <p>Elige tu opción:</p>
+            <button id="startLogin" class="btn-primary">Iniciar Sesión</button>
+            <button id="startRegister" class="btn-secondary">Registrarse</button>
+        </div>
+
+        <div id="auth-forms" class="hidden">
+
+            <form id="loginForm" class="auth-form hidden"> 
+                <h2>🚀 Iniciar Sesión</h2>
+                <div class="input-group">
+                    <label for="login-username">Usuario:</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Entrar</button>
+                <p class="switch-link">¿No tienes cuenta? <a href="#" id="showRegister">Regístrate</a></p>
+            </form>
+            
+            <form id="registerForm" class="auth-form hidden"> 
+                <h2>📝 Crear Cuenta</h2>
+                <div class="input-group">
+                    <label for="reg-username">Usuario:</label>
+                    <input type="text" id="reg-username" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-password">Contraseña:</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Registrarme</button>
+                <p class="switch-link">¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia Sesión</a></p>
+            </form>
+        </div>
+
+        <p id="message" class="message"></p>
+        
+        <div id="dashboard-screen" class="hidden">
+            <h2 id="welcome-title"></h2>
+            <p>¡Has accedido al panel de control del frontend!</p>
+            <p>El Backend confirmó tu identidad.</p>
+            <button id="logout-button-dashboard" class="btn-secondary">Cerrar Sesión</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

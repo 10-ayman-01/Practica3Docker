@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f0f5 0%, #e0e0eb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #4a4e69;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+#selection-screen {
+    text-align: center;
+    padding: 20px 0;
+}
+#selection-screen p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #666;
+}
+#selection-screen .btn-primary,
+#selection-screen .btn-secondary {
+    margin: 10px 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #5d5dff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(93, 93, 255, 0.2);
+}
+
+button { 
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: 600;
+    margin-top: 10px; 
+}
+
+.btn-primary {
+    background-color: #5d5dff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #4a4ae6;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: none;
+    color: #5d5dff;
+    border: 1px solid #5d5dff;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f5;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.message {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.message.error {
+    background-color: #ffebeb;
+    color: #cc0000;
+    border: 1px solid #ffcccc;
+}
+
+.message.success {
+    background-color: #ebfff0;
+    color: #008000;
+    border: 1px solid #ccffcc;
+}
+
+@media (max-width: 500px) {
+    .login-container {
+        margin: 20px;
+        padding: 25px 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+}
