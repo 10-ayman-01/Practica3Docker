@@ -4,6 +4,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: frontend
+    user: root
     ports:
       - "8080:80"
     depends_on:
@@ -22,7 +23,6 @@ services:
       MONGO_URI: mongodb://mongo-db:27017/login_db
     depends_on:
       - mongo-db
-    
     volumes:
       - ./backend:/app
       - /app/node_modules
